@@ -10,8 +10,15 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider',
         "use strict";
         $routeProvider.when("/", {
             templateUrl: '/partials/home.html',
-            controller: 'homeCntl',
-            currentTab: 'home'
+            controller: 'homeCntl'
+        });
+        $routeProvider.when("/About", {
+            templateUrl: '/partials/about.html',
+            controller: 'aboutCntl'
+        });
+        $routeProvider.when("/Contact/:type", {
+            templateUrl: '/partials/contact.html',
+            controller: 'contactCntl'
         });
         $routeProvider.when("/Resume", {
             templateUrl: '/partials/resume.html',
@@ -20,12 +27,15 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider',
         $routeProvider.otherwise({
             redirectTo: "/"
         });
-        //$locationProvider.html5Mode(true);
         $httpProvider.defaults.useXDomain = true;
         delete $httpProvider.defaults.headers.common['X-Requested-With'];
     }]);
 
 //Controllers
+app.controller("aboutCntl", function ($scope) {
+    "use strict";
+});
+
 app.controller("baseCntl", function ($scope, $rootScope, $modal, $route) {
     "use strict";
         $scope.$on('errorThrown', function (o, title, message) {
@@ -42,10 +52,15 @@ app.controller("baseCntl", function ($scope, $rootScope, $modal, $route) {
     $scope.$on('$routeChangeSuccess', function(event, current, previous, rejection) { $scope.controller = current.controller; }); //Capture controller here for use in tab active classes
 });
 
-app.controller("homeCntl", function ($scope, $modal) {
+app.controller("contactCntl", function ($scope, $route, $routeParams) {
+    "use strict";
+    $scope.type = $routeParams.type;
+});
+
+app.controller("homeCntl", function ($scope) {
     "use strict";
 });
 
-app.controller("resumeCntl", function ($scope, $modal) {
+app.controller("resumeCntl", function ($scope) {
     "use strict";
 });

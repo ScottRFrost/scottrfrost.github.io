@@ -1,2 +1,4 @@
 /*csslint ids: false */﻿
 #main-content { margin-top: 60px; }
+.navbar-brand{font-size:2em;}
+.navbar i{font-size:1.2em;}
