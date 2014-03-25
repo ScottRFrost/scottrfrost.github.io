@@ -1,4 +1,21 @@
-/*csslint ids: false */﻿
-#main-content { margin-top: 60px; }
-.navbar-brand{font-size:2em;}
-.navbar i{font-size:1.2em;}
+/*csslint ids: false */
+
+#main-content {
+    margin-top: 6em;
+}
+.jumbotron {
+    border-radius: 10px;
+}
+.jumbotron h1 {
+    margin: 0.5em;
+}
+.navbar-brand {
+    font-size: 2em;
+}
+.navbar i {
+    font-size: 1.2em;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}

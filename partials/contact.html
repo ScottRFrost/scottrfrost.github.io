@@ -1,1 +1,121 @@
-{{type}} Contact 
+<div data-ng-hide="type != 'Employment'">
+    <div class="panel panel-primary">
+        <div class="panel-heading">You have a job opportunity for me?</div>
+        <div class="panel-body">
+            ---
+        </div>
+    </div>
+</div>
+<div data-ng-hide="type != 'SideWork'">
+    <div class="panel panel-primary">
+        <div class="panel-heading">You have some side work for me?</div>
+        <div class="panel-body">
+            ---
+        </div>
+    </div>
+</div>
+<div data-ng-hide="type != 'Reference'">
+    <div class="panel panel-primary">
+        <div class="panel-heading">You'd like a reference for someone that I've worked with?</div>
+        <div class="panel-body">
+            ---
+        </div>
+    </div>
+</div>
+<div data-ng-hide="type != 'Networking'">
+    <div class="panel panel-primary">
+        <div class="panel-heading">You'd like to network with me?</div>
+        <div class="panel-body">
+            ---
+        </div>
+    </div>
+</div>
+<div data-ng-hide="type != 'Professional'">
+    <div class="panel panel-primary">
+        <div class="panel-heading">You have a professional query that I haven't covered?</div>
+        <div class="panel-body">
+            ---
+        </div>
+    </div>
+</div>
+<div data-ng-hide="type != 'Personal'">
+    <div class="panel panel-primary">
+        <div class="panel-heading">You have a personal question for me?</div>
+        <div class="panel-body">
+            ---
+        </div>
+    </div>
+</div>
+<div data-ng-hide="type != 'Personal'">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Your email has been sent</div>
+        <div class="panel-body">
+            Thank you!
+        </div>
+    </div>
+</div>
+<div class="panel panel-default" data-ng-hide="type == 'Sent'">
+    <div class="panel-heading">Please fill out this form to email me</div>
+    <div class="panel-body">
+        <form class="form-horizontal" action="http://getsimpleform.com/messages?form_api_token=ebe642ebe4fa7bf5c37f82f81f080f62" method="post">
+            <div class="form-group">
+                <label class="col-lg-2 control-label" for="name">Name</label>
+                <div class="col-lg-10">
+                    <input type="text" placeholder="Name" id="name" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label" for="organization">Organization</label>
+                <div class="col-lg-10">
+                    <input type="text" placeholder="Organization" id="organization" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label" for="emailAddress">Email Address</label>
+                <div class="col-lg-10">
+                    <input type="text" placeholder="Email Address" id="emailAddress" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label" for="emailBody">What would you like to tell me?</label>
+                <div class="col-lg-10">
+                    <textarea id="emailBody" rows="5" class="form-control"></textarea>
+                    <span class="help-block">Please provide as much detail as possible</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Does this require a reply?</label>
+                <div class="col-lg-10">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" checked="checked" value="yes" name="reply">Yes, please reply
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" value="ifInterested" name="reply">Only if interested
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" value="no" name="reply">No reply is necessary
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label" for="humanTest">What is four times ten, plus two</label>
+                <div class="col-lg-10">
+                    <input type="text" placeholder="Prove that you're human" id="humanTest" data-ng-model="humanTest" class="form-control">
+                    <br />
+                </div>
+            </div>
+            <div class="form-group" data-ng-hide="humanTest != 4 * 10 + 2">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <button class="btn btn-primary" type="submit" data-ng-disabled="humanTest != 4 * 10 + 2">Send Email</button>
+                </div>
+            </div>
+            <input type='hidden' name='redirect_to' value='http://scottrfrost.github.io/#/Contact/Sent' />
+        </form>
+    </div>
+</div>
