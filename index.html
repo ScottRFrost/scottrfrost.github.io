@@ -7,11 +7,12 @@
 
     As always, I'd be glad to entertain suggestions for how I can make this site better!
 -->
+
 <head>
     <meta charset="utf-8" />
     <meta name="description" content="Scott R. Frost - A .NET Software Engineer in Cincinnati, Ohio" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scott R. Frost - A .NET Software Engineer in Cincinnati, Ohio</title>
+    <title>Scott R. Frost - A Software Engineer in Cincinnati, Ohio</title>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/g/bootswatch(flatly/bootstrap.min.css)" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.0.3/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/app.min.css" />
@@ -37,16 +38,20 @@
             <div class="navbar-collapse collapse" data-ng-class="!navCollapsed && 'in'">
                 <ul class="nav navbar-nav">
                     <li data-ng-class="{active: controller == 'homeCntl'}">
-                        <a href="/"><i class="fa fa-home"></i> Home</a>
+                        <a href="/">
+                            <i class="fa fa-home"></i>Home</a>
                     </li>
                     <li data-ng-class="{active: controller == 'aboutCntl'}">
-                        <a href="/#About"><i class="fa fa-info-circle"></i> About</a>
+                        <a href="/#About">
+                            <i class="fa fa-info-circle"></i>About</a>
                     </li>
                     <li data-ng-class="{active: controller == 'resumeCntl'}">
-                        <a href="/#Resume"><i class="fa fa-briefcase"></i> Resume</a>
+                        <a href="/#Resume">
+                            <i class="fa fa-briefcase"></i>Resume</a>
                     </li>
                     <li class="dropdown" data-ng-class="{active: controller == 'contactCntl'}">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Email Me
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-envelope"></i>Email Me
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
@@ -76,24 +81,30 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-external-link"></i> Around the Web
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-external-link"></i>Around the Web
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a target="_blank" href="https://www.linkedin.com/in/scottrfrost"><i class="fa fa-linkedin"></i> Linked In</a>
+                                <a target="_blank" href="https://www.linkedin.com/in/scottrfrost">
+                                    <i class="fa fa-linkedin"></i>Linked In</a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://github.com/ScottRFrost"><i class="fa fa-github"></i> GitHub Contributions</a>
+                                <a target="_blank" href="https://github.com/ScottRFrost">
+                                    <i class="fa fa-github"></i>GitHub Contributions</a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://stackoverflow.com/users/1187752/scottrfrost"><i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                                <a target="_blank" href="https://stackoverflow.com/users/1187752/scottrfrost">
+                                    <i class="fa fa-stack-overflow"></i>Stack Overflow</a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://picasaweb.google.com/ScottRFrost"><i class="fa fa-google-plus-square"></i> Google+ Photo Gallery</a>
+                                <a target="_blank" href="https://picasaweb.google.com/ScottRFrost">
+                                    <i class="fa fa-google-plus-square"></i>Google+ Photo Gallery</a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://github.com/ScottRFrost/scottrfrost.github.io/wiki"><i class="fa fa-list-alt"></i> Personal Wiki</a>
+                                <a target="_blank" href="https://github.com/ScottRFrost/scottrfrost.github.io/wiki">
+                                    <i class="fa fa-list-alt"></i>Personal Wiki</a>
                             </li>
                         </ul>
                     </li>
