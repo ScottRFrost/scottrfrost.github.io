@@ -13,16 +13,14 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider',
             controller: 'homeCntl'
         });
         $routeProvider.when("/About", {
-            templateUrl: '/partials/about.html',
-            controller: 'aboutCntl'
+            templateUrl: '/partials/about.html'
         });
         $routeProvider.when("/Contact/:type", {
             templateUrl: '/partials/contact.html',
             controller: 'contactCntl'
         });
         $routeProvider.when("/Resume", {
-            templateUrl: '/partials/resume.html',
-            controller: 'resumeCntl'
+            templateUrl: '/partials/resume.html'
         });
         $routeProvider.otherwise({
             redirectTo: "/"
@@ -59,8 +57,5 @@ app.controller("contactCntl", function ($scope, $route, $routeParams) {
 
 app.controller("homeCntl", function ($scope) {
     "use strict";
-});
-
-app.controller("resumeCntl", function ($scope) {
-    "use strict";
+    //https://api.github.com/users/ScottRFrost/gists
 });
