@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-us" data-ng-app="ng-app" id="ng-app">
 <!--
     Hi there!
@@ -49,8 +49,8 @@
                         <a href="/#Resume">
                             <i class="fa fa-briefcase"></i> Resume</a>
                     </li>
-                    <li class="dropdown" dropdown data-ng-class="{active: controller == 'contactCntl'}">
-                        <a href="#" class="dropdown-toggle" dropdown-toggle="dropdown">
+                    <li class="dropdown" data-dropdown data-ng-class="{active: controller == 'contactCntl'}">
+                        <a href="#" class="dropdown-toggle" data-dropdown-toggle="dropdown">
                             <i class="fa fa-envelope"></i> Email Me
                             <b class="caret"></b>
                         </a>
@@ -80,8 +80,8 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown" dropdown>
-                        <a href="#" class="dropdown-toggle" dropdown-toggle="dropdown">
+                    <li class="dropdown" data-dropdown>
+                        <a href="#" class="dropdown-toggle" data-dropdown-toggle="dropdown">
                             <i class="fa fa-external-link"></i>Around the Web
                             <b class="caret"></b>
                         </a>
