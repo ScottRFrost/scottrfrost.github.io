@@ -1,61 +1,68 @@
 /*jslint vars: true, white: true, browser: true, eqeq: true, plusplus: true, es5: true */
 /*global angular, $ */
 
-//App Setup
-var app = angular.module("ng-app", ["ngRoute", "ngAnimate", "ui.bootstrap"]);
+(function (angular) {
+    'use strict';
+    angular.module('ng-app', ['ngMaterial', 'ngRoute', 'ngAria', 'ngAnimate'])
 
-//Routing
-app.config(['$routeProvider', '$locationProvider', '$httpProvider',
-    function ($routeProvider, $locationProvider, $httpProvider) {
-        "use strict";
+    .config(function ($routeProvider, $locationProvider, $httpProvider) {
         $routeProvider.when("/", {
-            templateUrl: '/partials/home.html',
-            controller: 'homeCntl'
+            templateUrl: '/partials/home.html'
         });
         $routeProvider.when("/About", {
             templateUrl: '/partials/about.html'
         });
         $routeProvider.when("/Contact/:type", {
             templateUrl: '/partials/contact.html',
-            controller: 'contactCntl'
+            controller: 'ContactController'
         });
         $routeProvider.when("/Resume", {
             templateUrl: '/partials/resume.html'
+            //,controller: 'resumeCntl'
         });
         $routeProvider.otherwise({
             redirectTo: "/"
         });
+
+        $locationProvider.html5Mode(false);
         $httpProvider.defaults.useXDomain = true;
         delete $httpProvider.defaults.headers.common['X-Requested-With'];
-    }]);
+    })
 
-//Controllers
-app.controller("aboutCntl", function ($scope) {
-    "use strict";
-});
+    .controller('MainController', function ($scope, $route, $routeParams, $location, $mdSidenav, $mdDialog) {
+        $scope.$route = $route;
+        $scope.$location = $location;
+        $scope.$routeParams = $routeParams;
+        $scope.pageName = 'Home';
 
-app.controller("baseCntl", function ($scope, $rootScope, $modal, $route) {
-    "use strict";
-        $scope.$on('errorThrown', function (o, title, message) {
-            $modal.open({
-                scope: $scope,
-                template: '<div class="modal-header"><h3>' + title + '</h3></div><div class="modal-body">' + message + '</div><div class="modal-footer"><button class="btn btn-primary" ng-click="confirm()"><i class="fa fa-check"></i> OK</button></div>',
-                controller: function ($modalInstance) {
-                    $scope.confirm = function () {
-                        $modalInstance.dismiss('cancel');
-                    };
-                }
-            });
-        });
-    $scope.$on('$routeChangeSuccess', function(event, current, previous, rejection) { $scope.controller = current.controller; }); //Capture controller here for use in tab active classes
-});
+        //Menu
+        $scope.menuItems = [
+            { name: 'Home', url: '/', active: true },
+            { name: 'About', url: '/About', active: false },
+            { name: 'Resume', url: '/Resume', active: false },
+            { name: 'Contact Me', url: '/Contact/Select', active: false },
+            { name: 'Linked In', url: 'https://www.linkedin.com/in/scottrfrost', active: false },
+            { name: 'GitHub', url: 'https://github.com/ScottRFrost', active: false },
+            { name: 'Stack Overflow', url: 'https://stackoverflow.com/users/1187752/scottrfrost', active: false },
+            { name: 'Personal Wiki', url: 'https://github.com/ScottRFrost/scottrfrost.github.io/wiki', active: false },
+            { name: 'Google Photos', url: 'https://plus.google.com/photos/+ScottFrost/albums', active: false }
+        ];
+        $scope.toggleLeft = function () {
+            $mdSidenav('left').toggle();
+        };
+        $scope.changePage = function (index) {
+            if ($scope.menuItems[index].url.substring(0, 4) === "http") {
+                window.location.assign($scope.menuItems[index].url);
+            } else {
+                $location.path($scope.menuItems[index].url);
+                $scope.pageName = $scope.menuItems[index].name;
+                $scope.toggleLeft();
+            }
+        }
+    })
 
-app.controller("contactCntl", function ($scope, $route, $routeParams) {
-    "use strict";
-    $scope.type = $routeParams.type;
-});
-
-app.controller("homeCntl", function ($scope) {
-    "use strict";
-    //https://api.github.com/users/ScottRFrost/gists
-});
+     .controller('ContactController', function ($scope, $routeParams) {
+         $scope.type = $routeParams.type;
+         $scope.pageName = 'Contact';
+    });
+})(window.angular);

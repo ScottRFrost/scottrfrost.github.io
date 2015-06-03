@@ -1,134 +1,232 @@
-<div data-ng-hide="type != 'Employment'">
-    <div class="panel panel-primary">
-        <div class="panel-heading">You have a job opportunity for me?</div>
-        <div class="panel-body">
-            <p>
-                That's great, I'd love to hear about it!
-            </p>
-            
-            However, I'm <strong>NOT</strong> currently interested in the following:
-            <ul>
-                <li>Positions outside of the Cincinnati, OH area, unless they're 100% telecommute</li>
-                <li>Positions requiring more than 20% travel</li>
-                <li>PHP/WordPress, SharePoint, or Java positions</li>
-            </ul>
+<div data-ng-show="type === 'Select'">
+    <div layout="row" layout-gt-md="row" layout-margin>
+        <div flex layout="column">
+            <md-whiteframe class="md-whiteframe-z1">
+                <md-toolbar class="md-default-theme">
+                    <h2 class="md-toolbar-tools">
+                        I'd love to hear from you!  But first, what kind of contact is this?
+                    </h2>
+                </md-toolbar>
+                <md-content class="md-padding text-center">
+                    <md-button ng-click="$location.path('/Contact/Employment')" aria-label="Employment">
+                        Employment Opportunity
+                    </md-button>
+                    <md-button ng-click="$location.path('/Contact/SideWork')" aria-label="Side Work">
+                        Evening / Weekend Side Work
+                    </md-button>
+                    <md-button ng-click="$location.path('/Contact/Reference')" aria-label="Reference">
+                        Professional Reference
+                    </md-button>
+                    <md-button ng-click="$location.path('/Contact/Networking')" aria-label="Networking">
+                        Networking / You're a Recruiter
+                    </md-button>
+                    <md-button ng-click="$location.path('/Contact/Professional')" aria-label="Professional">
+                        Other Professional Query
+                    </md-button>
+                    <md-button ng-click="$location.path('/Contact/Personal')" aria-label="Personal">
+                        Personal Query
+                    </md-button>
+                </md-content>
+            </md-whiteframe>
         </div>
     </div>
 </div>
-<div data-ng-hide="type != 'SideWork'">
-    <div class="panel panel-primary">
-        <div class="panel-heading">You have some side work for me?</div>
-        <div class="panel-body">
-            <p>
-                That's great, I'm always accepting side work!
-            </p>
-            
-            I don't mind working evenings and weekends for a little extra money.  Keep in mind that I do have a wife and kids at home so I probably am not the best choice if you need a commitment of more than 20 hours a week.
+
+<div data-ng-show="type === 'Employment'">
+    <div layout="row" layout-gt-md="row" layout-margin>
+        <div flex layout="column">
+            <md-whiteframe class="md-whiteframe-z1">
+                <md-toolbar class="md-default-theme">
+                    <h2 class="md-toolbar-tools">
+                        You have a job opportunity for me?
+                    </h2>
+                </md-toolbar>
+                <md-content class="md-padding text-center">
+                    <p>
+                        That's great, I'd love to hear about it!
+                    </p>
+
+                    However, I'm <strong>NOT</strong> currently interested in the following:<br/>
+                        Positions outside of the Cincinnati, OH area, unless they're 100% telecommute<br />
+                        Positions requiring more than 20% travel<br />
+                        PHP/WordPress, SharePoint, or Java positions<br />
+                </md-content>
+            </md-whiteframe>
         </div>
     </div>
 </div>
-<div data-ng-hide="type != 'Reference'">
-    <div class="panel panel-primary">
-        <div class="panel-heading">You'd like a reference for someone that I've worked with?</div>
-        <div class="panel-body">
-            I'd be happy to give you an honest assessment of anyone that I've worked with in the past, so feel free to ask.
+
+
+<div data-ng-show="type === 'SideWork'">
+    <div layout="row" layout-gt-md="row" layout-margin>
+        <div flex layout="column">
+            <md-whiteframe class="md-whiteframe-z1">
+                <md-toolbar class="md-default-theme">
+                    <h2 class="md-toolbar-tools">
+                        You have some side work for me?
+                    </h2>
+                </md-toolbar>
+                <md-content class="md-padding text-center">
+                    <p>
+                        That's great, I'm usually accepting side work!
+                    </p>
+
+                    I don't mind working evenings and weekends for a little extra money. Keep in mind that I do have a wife and kids at home so I probably am not the best choice if you need a commitment of more than 20 hours a week.
+                </md-content>
+            </md-whiteframe>
         </div>
     </div>
 </div>
-<div data-ng-hide="type != 'Networking'">
-    <div class="panel panel-primary">
-        <div class="panel-heading">You'd like to network with me?</div>
-        <div class="panel-body">
-            Your best bet is <a target="_blank" href="https://www.linkedin.com/in/scottrfrost"><i class="fa fa-linkedin"></i>Linked In</a>, but I'd be happy to talk with you over email as well.
+
+
+<div data-ng-show="type === 'Reference'">
+    <div layout="row" layout-gt-md="row" layout-margin>
+        <div flex layout="column">
+            <md-whiteframe class="md-whiteframe-z1">
+                <md-toolbar class="md-default-theme">
+                    <h2 class="md-toolbar-tools">
+                        You'd like a reference for someone that I've worked with?
+                    </h2>
+                </md-toolbar>
+                <md-content class="md-padding text-center">
+                    <p>
+                        I'd be happy to give you an honest assessment of anyone that I've worked with in the past, so feel free to ask.
+                    </p>
+                </md-content>
+            </md-whiteframe>
         </div>
     </div>
 </div>
-<div data-ng-hide="type != 'Professional'">
-    <div class="panel panel-primary">
-        <div class="panel-heading">You have a professional query that I haven't covered?</div>
-        <div class="panel-body">
-            Please provide some details below.
+
+
+<div data-ng-show="type === 'Networking'">
+    <div layout="row" layout-gt-md="row" layout-margin>
+        <div flex layout="column">
+            <md-whiteframe class="md-whiteframe-z1">
+                <md-toolbar class="md-default-theme">
+                    <h2 class="md-toolbar-tools">
+                        You'd like to network with me?
+                    </h2>
+                </md-toolbar>
+                <md-content class="md-padding text-center">
+                    <p>
+                        Your best bet is <a target="_blank" href="https://www.linkedin.com/in/scottrfrost">Linked In</a>, but I'd be happy to talk with you over email as well.
+                    </p>
+                </md-content>
+            </md-whiteframe>
         </div>
     </div>
 </div>
-<div data-ng-hide="type != 'Personal'">
-    <div class="panel panel-primary">
-        <div class="panel-heading">You have a personal question for me?</div>
-        <div class="panel-body">
-            Please provide some details below.
+
+
+<div data-ng-show="type === 'Professional'">
+    <div layout="row" layout-gt-md="row" layout-margin>
+        <div flex layout="column">
+            <md-whiteframe class="md-whiteframe-z1">
+                <md-toolbar class="md-default-theme">
+                    <h2 class="md-toolbar-tools">
+                        You have a professional query that I haven't covered?
+                    </h2>
+                </md-toolbar>
+                <md-content class="md-padding text-center">
+                    <p>
+                        Please provide some details below.
+                    </p>
+                </md-content>
+            </md-whiteframe>
         </div>
     </div>
 </div>
-<div data-ng-hide="type != 'Sent'">
-    <div class="panel panel-primary">
-        <div class="panel-heading">Your email has been sent</div>
-        <div class="panel-body">
-            Thank you!
+
+
+<div data-ng-show="type === 'Personal'">
+    <div layout="row" layout-gt-md="row" layout-margin>
+        <div flex layout="column">
+            <md-whiteframe class="md-whiteframe-z1">
+                <md-toolbar class="md-default-theme">
+                    <h2 class="md-toolbar-tools">
+                        You have a personal question for me?
+                    </h2>
+                </md-toolbar>
+                <md-content class="md-padding text-center">
+                    <p>
+                        Please provide some details below.
+                    </p>
+                </md-content>
+            </md-whiteframe>
         </div>
     </div>
 </div>
-<div class="panel panel-default" data-ng-hide="type == 'Sent'">
-    <div class="panel-heading">Please fill out this form to email me</div>
-    <div class="panel-body">
-        <form class="form-horizontal" action="http://getsimpleform.com/messages?form_api_token=ebe642ebe4fa7bf5c37f82f81f080f62" method="post">
-            <div class="form-group">
-                <label class="col-lg-2 control-label" for="name">Name</label>
-                <div class="col-lg-10">
-                    <input type="text" placeholder="Name" id="name" class="form-control">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-2 control-label" for="organization">Organization</label>
-                <div class="col-lg-10">
-                    <input type="text" placeholder="Organization" id="organization" class="form-control">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-2 control-label" for="emailAddress">Email Address</label>
-                <div class="col-lg-10">
-                    <input type="text" placeholder="Email Address" id="emailAddress" class="form-control">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-2 control-label" for="emailBody">What would you like to tell me?</label>
-                <div class="col-lg-10">
-                    <textarea id="emailBody" rows="5" class="form-control"></textarea>
-                    <span class="help-block">Please provide as much detail as possible</span>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-2 control-label">Does this require a reply?</label>
-                <div class="col-lg-10">
-                    <div class="radio">
-                        <label>
-                            <input type="radio" checked="checked" value="yes" name="reply">Yes, please reply
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" value="ifInterested" name="reply">Only if interested
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" value="no" name="reply">No reply is necessary
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-2 control-label" for="humanTest">What is four times ten, plus two</label>
-                <div class="col-lg-10">
-                    <input type="text" placeholder="Prove that you're human" id="humanTest" data-ng-model="humanTest" class="form-control">
-                    <br />
-                </div>
-            </div>
-            <div class="form-group" data-ng-hide="humanTest != 4 * 10 + 2">
-                <div class="col-lg-10 col-lg-offset-2">
-                    <button class="btn btn-primary" type="submit" data-ng-disabled="humanTest != 4 * 10 + 2">Send Email</button>
-                </div>
-            </div>
-            <input type="hidden" name="redirect_to" value="http://scottrfrost.github.io/#/Contact/Sent" />
-        </form>
+
+
+<div data-ng-show="type === 'Sent'">
+    <div layout="row" layout-gt-md="row" layout-margin>
+        <div flex layout="column">
+            <md-whiteframe class="md-whiteframe-z1">
+                <md-toolbar class="md-default-theme">
+                    <h2 class="md-toolbar-tools">
+                        Your email has been sent!
+                    </h2>
+                </md-toolbar>
+                <md-content class="md-padding text-center">
+                    <p>
+                        Thank you!
+                    </p>
+                    I'll get back to you as soon as I can.
+                </md-content>
+            </md-whiteframe>
+        </div>
+    </div>
+</div>
+
+
+<div data-ng-hide="type === 'Sent' || type === 'Select'">
+    <div layout="row" layout-gt-md="row" layout-margin>
+        <div flex layout="column">
+            <md-whiteframe class="md-whiteframe-z1">
+                <md-toolbar class="md-default-theme">
+                    <h2 class="md-toolbar-tools">
+                        Please fill out this form to email me
+                    </h2>
+                </md-toolbar>
+                <md-content class="md-padding text-center">
+                    <form class="form-horizontal" action="http://getsimpleform.com/messages?form_api_token=ebe642ebe4fa7bf5c37f82f81f080f62" method="post">
+                        <div layout layout-sm="column">
+                            <md-input-container flex>
+                                <label>Name</label>
+                                <input type="text" placeholder="Name" id="name">
+                            </md-input-container>
+
+                            <md-input-container flex>
+                                <label>Organization</label>
+                                <input type="text" placeholder="Organization" id="organization">
+                            </md-input-container>
+
+                            <md-input-container flex>
+                                <label>Email Address</label>
+                                <input type="text" placeholder="Email Address" id="emailAddress">
+                            </md-input-container>
+
+                            <md-input-container flex>
+                                <label>What is four times ten, plus two?</label>
+                                <input type="text" placeholder="Prove that you're human" id="humanTest" data-ng-model="humanTest">
+                            </md-input-container>
+                        </div>
+                        <div layout layout-sm="column">
+                            <md-input-container flex>
+                                <label>What would you like to tell me? Provide as much detail as possible.</label>
+                                <textarea id="emailBody" rows="5"></textarea>
+                            </md-input-container>
+                        </div>
+                        <div class="text-center">
+                            <div>Does this require a reply?</div>
+                            <input type="checkbox" checked="checked" value="yes">Yes, please reply<br/>
+                            <button type="submit" data-ng-hide="humanTest != 4 * 10 + 2">Send Email</button>
+                        </div>
+                        <input type="hidden" name="redirect_to" value="http://scottrfrost.github.io/#/Contact/Sent" />
+                    </form>
+                </md-content>
+            </md-whiteframe>
+        </div>
     </div>
 </div>

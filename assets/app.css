@@ -1,21 +1,215 @@
-/*csslint ids: false */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 960px;
+    height: 100%;
+    overflow: hidden;
+}
 
+/* Override chromes horrible yellow autofill coloring */
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px white inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: #333;
+    border-color: inherit;
+}
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: /*your box-shadow*/,0 0 0 50px white inset;
+    -webkit-text-fill-color: #333;
+    border-color: inherit;
+}
+
+/* Detect low resolution phones in portrait mode */
+.no-small {display:none}
+@media screen and (min-width: 961px) {
+    .no-small {display:inherit}
+    .small-only { display: none;}
+}
+@media screen and (orientation:landscape) {
+    .no-small {display:inherit}
+    .small-only { display: none;}
+}
+
+/* Make disabled stuff more readable */
+md-input-container label{
+    color: #555 !important;
+}
+md-input-container input {
+    color: black !important;
+}
+
+/* TOP NAV */
+#header-container {
+    position: fixed;
+    height: 64px;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+#topNav .menu-item {
+    border: none !important;
+}
+#topToolbar button {
+    font-size: 1.8em;
+}
+#topToolbar i {
+    color: #fff;
+    /*font-size: 1.8em;*/
+}
+
+/* MAIN */
 #main-content {
-    margin-top: 6em;
+    padding: 64px 0 0 0;
+    width: 100%;
+    height: calc(100% - 64px);
+    overflow: auto;
 }
-.jumbotron {
-    border-radius: 10px;
+#busy-indicator {
+    position: absolute;
+    left: 49.5%;
+    z-index: 2;
+    top: 0.5em;
 }
-.jumbotron h1 {
-    margin: 0.5em;
+
+/* SIDE NAV */
+#sideNav button.md-primary {
+    width: 100%;
 }
-.navbar-brand {
+#sideNav md-toolbar {
+    font-size: 0.9em;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* General Classes */
+.pad10 {
+    padding: 10px;
+}
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+.w100 {
+    width: 100px;
+}
+.w400{
+    width: 400px;
+}
+.w100p {
+    width: 100%;
+}
+.big {
     font-size: 2em;
 }
-.navbar i {
-    font-size: 1.2em;
+.huge {
+    font-size: 4em;
 }
-.center {
-  margin-left: auto;
-  margin-right: auto;
+.small {
+    font-size: 0.5em;
+}
+.rotate-90 {
+    transform: rotate(90deg);
+}
+.rotate-180 {
+    transform: rotate(90deg);
+}
+.rotate-270 {
+    transform: rotate(270deg);
+}
+.flip-horiz {
+    transform: scale(-1, 1);
+}
+.flip-vert {
+    transform: scale(1, -1);
+}
+
+/* Re-used classes per page*/
+#page-buttons {
+    position: fixed;
+    top: 5px;
+    right: 20px;
+    z-index: 42;
+}
+#page-buttons i {
+    color: #fff;
+    background-color: #1E3C69;
+    padding: 5px;
+}
+#search-options {
+    position: fixed;
+    top: -10px;
+    padding: 5px;
+    left: 70px;
+    z-index: 42;
+}
+#search-options label, #search-options input  {
+    color: #fff !important;
+    border-color: #fff !important;
+    background-color: #1E3C69 !important;
+}
+#search-results {
+    width: 100%
+}
+#search-results i.material-icons {
+    vertical-align: bottom;
+    font-size: 1.3em;
+}
+
+#search-results tr, #search-results td {
+    text-align: left;
+}
+#search-results tbody tr:hover, #search-results thead th.sortable:hover, table.data-table tbody tr:hover {
+    color: #fff;
+    background-color: #008066;
+    cursor: pointer;
+}
+table.data-table tbody tr:hover input {
+    color: #008066;
+}
+#search-paging label {
+    line-height: 1.5em;
+}
+#search-paging md-select  {
+    margin: 0 5px;
+}
+#search-paging i  {
+    font-size: 24px;
+    vertical-align: baseline;
+    cursor: pointer;
+    line-height: 42px;
+}
+
+/* Angular Material Customizations */
+md-backdrop.md-opaque.md-default-theme {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+md-whiteframe md-input-container {
+    padding-bottom: 0;
+}
+.md-button {
+    min-width: 0;
+}
+#sideNav i.material-icons {
+    font-size: 36px;
+    line-height: 56px;
+}
+.material-icons {
+    font-size: 1em;
+    line-height: normal;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(63, 81, 181);
 }
