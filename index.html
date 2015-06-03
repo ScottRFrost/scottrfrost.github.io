@@ -56,7 +56,7 @@
                     <md-button ng-click="goBack()" aria-label="Go Back Without Saving" ng-if="backURL">
                         <i class="material-icons">&#xE5C4;</i>
                     </md-button>
-                    <span>Scott R. Frost :: {{pageName}}</span>
+                    <span>Scott R. Frost </span><span ng-if="pageName != 'Home'">&nbsp;:: {{pageName}}</span>
                 </h2>
             </div>
             <!--<div id="topNav" ng-hide="!showNav || backURL" class="no-small">

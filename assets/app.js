@@ -1,6 +1,3 @@
-/*jslint vars: true, white: true, browser: true, eqeq: true, plusplus: true, es5: true */
-/*global angular, $ */
-
 (function (angular) {
     'use strict';
     angular.module('ng-app', ['ngMaterial', 'ngRoute', 'ngAria', 'ngAnimate'])
