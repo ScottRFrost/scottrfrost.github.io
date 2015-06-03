@@ -2,7 +2,7 @@
     'use strict';
     angular.module('ng-app', ['ngMaterial', 'ngRoute', 'ngAria', 'ngAnimate'])
 
-    .config(function ($routeProvider, $locationProvider, $httpProvider) {
+    .config(function ($routeProvider, $locationProvider, $httpProvider, $mdThemingProvider) {
         $routeProvider.when("/", {
             templateUrl: '/partials/home.html'
         });
@@ -24,6 +24,10 @@
         $locationProvider.html5Mode(false);
         $httpProvider.defaults.useXDomain = true;
         delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
+        $mdThemingProvider.theme('default')
+            .primaryPalette('blue')
+            .accentPalette('grey');
     })
 
     .controller('MainController', function ($scope, $route, $routeParams, $location, $mdSidenav, $mdDialog) {
