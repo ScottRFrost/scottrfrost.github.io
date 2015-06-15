@@ -85,8 +85,11 @@ md-input-container input {
 .red {
     color: red;
 }
+.orange {
+    color: darkorange;
+}
 .green {
-    color: green;
+    color: darkgreen;
 }
 .w100 {
     width: 100px;
@@ -200,4 +203,13 @@ md-whiteframe md-input-container {
 a {
     text-decoration: none;
     color: rgb(63, 81, 181);
+}
+h2,h3 {
+    margin: 1em 0 0.5em;
+}
+h4 {
+    margin: 1em 0 0.25em;
+}
+p {
+    margin: 0.25em 0 0.25em;
 }

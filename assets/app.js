@@ -9,6 +9,9 @@
         $routeProvider.when("/About", {
             templateUrl: '/partials/about.html'
         });
+        $routeProvider.when("/Apps", {
+            templateUrl: '/partials/apps.html'
+        });
         $routeProvider.when("/Contact/:type", {
             templateUrl: '/partials/contact.html',
             controller: 'ContactController'
@@ -42,6 +45,7 @@
             { name: 'About', url: '/About', active: false },
             { name: 'Resume', url: '/Resume', active: false },
             { name: 'Contact Me', url: '/Contact/Select', active: false },
+            { name: 'Apps / Technology Stack', url: '/Apps', active: false },
             { name: 'Linked In', url: 'https://www.linkedin.com/in/scottrfrost', active: false },
             { name: 'GitHub', url: 'https://github.com/ScottRFrost', active: false },
             { name: 'Stack Overflow', url: 'https://stackoverflow.com/users/1187752/scottrfrost', active: false },

@@ -1,0 +1,139 @@
+<div class="pad10">
+    <h1>
+        Apps / Technology stack
+    </h1>
+    <h4>
+        Key: <span class="green">Free Open Source Software (FOSS)</span> &#183; <span class="orange">Zero cost (including business use) closed source software</span> &#183; <span class="red">Commercial Software (even if free for private use)</span>
+    </h4>
+
+    <h2>
+        Internet / Networking
+    </h2>
+    <h3>
+        Web Browser - <a target="_blank" class="green" href="https://www.mozilla.org/en-US/firefox/developer/">Firefox (developer edition)</a>
+    </h3>
+    <p>
+        This was one of the easiest decisions on the list.  Your web browser is the most important piece of software on your computer, and it's just too important to trust to closed source software.
+    </p>
+    <p>
+        Runners up:
+        <a target="_blank" class="green" href="http://chromium.woolyss.com/">Chromium</a> doesn't have all the privacy problems of full Google Chrome but the extensions aren't nearly on par with Firefox and it can't play H.264 video. I use it for apps & sites that require Chrome.
+        <a target="_blank" class="orange" href="http://www.opera.com/">Opera</a> is decent, but is closed source and has comparatively few extensions.
+        If you're considering installing Google Chrome, search the web for 'Edward Snowden NSA Google' or wikipedia for 'PRISM (surveillance program)' first.
+    </p>
+
+    <h3>
+        Web Browser Extensions - Multiple Recommendations
+    </h3>
+    <p>
+        Extensions are critical to any great web browsing experience. I use the following:
+        <ul>
+            <li>
+                <a target="_blank" class="green" href="https://addons.mozilla.org/en-US/firefox/addon/bartab-plus/">
+                    BarTab Plus
+                </a> unloads tabs after a specified time. This is great for keeping memory / cpu usage in check with dozens of tabs open.
+            </li>
+            <li>
+                <a target="_blank" class="green" href="https://disconnect.me/search">
+                    Disconnect Search
+                </a> is a web-based proxy service that allows you to search Google, Bing, and Yahoo without being tracked. Great for when DuckDuckGo isn't finding what you wanted.
+            </li>
+            <li>
+                <a target="_blank" class="green" href="http://www.downthemall.net/">
+                    DownThemAll
+                </a> is the most intuitive download manager I've used. It can break large downloads into several threads (for speed) as well as download all images / links / etc on a page without having to click each.
+            </li>
+            <li>
+                <a target="_blank" class="green" href="http://www.telerik.com/fiddler">
+                    Fiddler
+                </a> allows you to inspect requests and response of everything your browsers are doing (including HTTPS traffic). Must have for devs.  Note that this is also a windows thick client app, not just a browser extension.
+            </li>
+            <li>
+                <a target="_blank" class="green" href="http://fireftp.net/">
+                    FireFTP
+                </a> integrates a complete FTP / SFTP (SSH) / FTPS (FTP with SSL) client into Firefox. Using this, I found I no longer needed WinSCP or Filezilla.
+            </li>
+            <li>
+                <a target="_blank" class="green" href="https://getfoxyproxy.org/">
+                    FoxyProxy
+                </a> is a handy extension that lets you automatically switch proxies based on URL patterns.
+            </li>
+            <li>
+                <a target="_blank" class="green" href="http://www.greasespot.net/">
+                    GreaseMonky
+                </a> allows the user to inject custom javascript (called userscripts) into a page. You can use this to add all kinds of functionality to your favorite sites.
+            </li>
+            <li>
+                <a target="_blank" class="green" href="https://www.eff.org/https-everywhere">
+                    HTTPS everywhere
+                </a> ensure that you always use HTTPS instead of HTTP on sites that support it.
+            </li>
+            <li>
+                <a target="_blank" class="green" href="http://tiny.cc/Imagus">
+                    Imagus
+                </a> provides simple mouse-hover zooming (in addition to quick download / etc shortcuts) to most common sites. A must for reddit / etc.
+            </li>
+            <li>
+                <a target="_blank" class="green" href="https://addons.mozilla.org/en-US/firefox/addon/noise/">
+                    Noise
+                </a> allows you to assign system noises to events. Set a sound to "Alert notificationbox" then turn on new mail notifications in your gmail settings. No more need for a separate gmail checker extension.
+            </li>
+            <li>
+                <a target="_blank" class="green" href="https://userstyles.org/">
+                    Stylish
+                </a> allows the user to inject custom CSS (called userstyles) into Firefox. Think of every site you visit as having selectable themes now.
+            </li>
+            <li>
+                <a target="_blank" class="green" href="https://github.com/gorhill/uBlock">
+                    uBlock Origin
+                </a> is the best ad / social spam / malware blocker. After install, go into 3rd-party filters and check everything in ads, privacy, malware domains, and social for a clean & fast browsing experience.
+            </li>
+            <li>
+                <a target="_blank" class="green" href="https://www.downloadhelper.net/">
+                    Video Download Helper
+                </a> 1 click download for embedded videos on YouTube and hundreds of other sites.
+            </li>
+        </ul>
+    </p>
+
+    <h3>
+        Instant Messaging - <a target="_blank" class="green" href="https://telegram.org/">Telegram</a>
+    </h3>
+    <p>
+        Instant messaging should be secure, private, portable / cross-platform, and free. After trying several, my friends and I have settled Telegram. It works on Windows / Mac / Linux / Web / Android / iOS, it's private (private chats are fully end-to-end encrypted), and it's secure.
+        If you need to connect to an older IM network for compatibility with friends / familiy / coworkers, consider <a target="_blank" class="green" href="https://pidgin.im/">Pidgin</a> or <a target="_blank" class="green" href="http://www.miranda-im.org/">Miranda IM</a>, but keep in mind that those services are probably not private OR secure because the servers and companies providing them are not.
+    </p>
+
+    <h3>
+        Voice Chat - <a target="_blank" class="green" href="http://mumble.info/">Mumble</a>
+    </h3>
+    <p>
+        Like instant messaging above, I believe that voice chat should also be secure, private, portable / cross-platform, and free. Unfortunately there are no publically-hosted services out there offering voice that I found to fit my needs.
+        I ended up setting up a Mumble server that my friends and I use for voice chat while gaming. The latest version uses TLS 1.2 and the latest cipher suites to keep your communication secure, even if you're just talking about pwning nubes. You shouldn't have to be discussing something sensitive to have the expectation of privacy, right?
+        If you're considering Skype, search the web for 'skype resolver' first. There are dozens of services out there that let you resolve a skype username to that user's real IP address, and even sell you 1 click DDOSing of that IP!
+    </p>
+
+    <h3>
+        Desktop Sharing /  Web Meetings - <a target="_blank" class="orange" href="https://join.me/">join.me</a>
+    </h3>
+    <p>
+        Desktop sharing shouldn't require participants to download software before they can join. Unfortunately there are no publically-hosted FOSS desktop sharing services out there that don't require a client install. join.me works well and is lightweight.
+        <a target="_blank" class="red" href="https://www.teamviewer.com/en/index.aspx">TeamViewer</a> and <a target="_blank" class="red" href="http://www.gotomeeting.com/">GoToMeeting</a> are very popular (and rightly so, they're quite nice), but being non-free for commercial use kind of kills it for me.
+    </p>
+
+    <h3>
+        File Transfer - Plain old Remote Desktop Client (built into Windows) or <a target="_blank" class="green" href="http://fireftp.net/">Firefox + FireFTP</a>
+    </h3>
+    <p>
+        I quit using FTP / FTPS to transfer files to my windows server yeeeeears ago. Open a RDP session, copy from local machine, paste in remote window works great and is encrypted! If you're going to a Linux or Mac host, FireFTP will get you there.
+        If you're using a Linux HOST, you can also install xrdp to get an RDP wrapper for VNC (file transfers still work) and not need a VNC client on your local machine.  If you're using Linux as your CLIENT OS for some reason, I feel bad for you son.
+    </p>
+
+    <h3>
+        P2P / File Sharing - <a target="_blank" class="green" href="http://www.qbittorrent.org/">qBittorrrent</a>
+    </h3>
+    <p>
+        IMPORTANT - I don't condone piracy of software, music or movies.  There are hundreds of legitimate use cases for p2p file sharing.  BitTorrent is the current king of p2[] applications, but their official clients are terrible.
+        I've been favoring qBittorrent or <a target=" _blank" class="green" href="http://deluge-torrent.org/">Deluge</a> since uTorrent started adding unacceptable bloat and malware.
+    </p>
+</div>
