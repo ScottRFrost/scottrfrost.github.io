@@ -141,7 +141,7 @@
         P2P / File Sharing - <a target="_blank" class="green" href="http://www.qbittorrent.org/">qBittorrrent</a>
     </h3>
     <p>
-        IMPORTANT - I don't condone piracy of software, music or movies. There are hundreds of legitimate use cases for p2p file sharing. BitTorrent is the current king of p2[] applications, but their official clients are terrible.
+        IMPORTANT - I don't condone piracy of software, music or movies. There are hundreds of legitimate use cases for p2p file sharing. BitTorrent is the current king of p2p applications, but their official clients are terrible.
         I've been favoring qBittorrent or <a target=" _blank" class="green" href="http://deluge-torrent.org/">Deluge</a> since uTorrent started adding unacceptable bloat and malware.
     </p>
 
@@ -154,8 +154,19 @@
         It's a shame that <a target="_blank" class="orange" href="https://www.amazon.com/clouddrive/primephotos">Amazon Prime Photos</a> has no way to share albums or folders, because I like the unlimited storage option there.
     </p>
 
+    <h3>
+        Private web browsing / filter avoidance - <a target="_blank" class="green" href="http://www.9bis.net/kitty/">KiTTY (a fork of PuTTY) client</a> with <a target="_blank" class="green" href="https://cygwin.com/">Cygwin OpenSSHd server</a>
+    </h3>
+    <p>
+        A SSH server sitting on some decent upstream bandwidth combined with FoxyProxy makes for a pretty simple private browsing / filter avoidance system.
+        If your server is Linux, it probably already has SSH server.
+        Follow the <a target="_blank" href="https://docs.oracle.com/cd/E24628_01/install.121/e22624/preinstall_req_cygwin_ssh.htm#EMBSC152">instructions here</a> to set up Cygwin OpenSSH if your server (or your home machine) runs Windows.
+        In KiTTY settings under SSH > Tunnels create a DYNAMIC local port tunnel and connect.  In FoxyProxy, create a new SOCKS proxy that points at the local port and whitelist whatever sites you'd like to go over the proxy.
+        In firefox about:config set extensions.foxyproxy.socks_remote_dns to true.  Make sure it works by going to one of the many "what's my IP address" websites.  It should show you server's IP address exter, not your regular external IP address that's shown in other browsers or with FoxyProxy disabled.
+    </p>
+
     <h2>
-        Productivity / System Tools
+        Productivity / Tools
     </h2>
     <h3>
         Office Suite - <a target="_blank" class="orange" href="https://drive.google.com/">Google Drive / Docs / Sheets / Slides</a>
@@ -178,6 +189,19 @@
     </p>
 
     <h3>
+        Image Editor / LOLcat maker - <a target="_blank" class="orange" href="http://www.getpaint.net/index.html/">Paint.NET</a>
+    </h3>
+    <p>
+        Paint.NET is a deceptively good image editor.  At $0 cost and only 6MB, you wouldn't think it could compete with Photoshop, but it does (at least for my needs).
+        It's extremely fast and does a great job for editng & retouching most things that I've run in to as a developer.
+        You have to spend some time loading it up with <a target="_blank" href="http://forums.getpaint.net/index.php?/topic/32048-boltbaits-plugin-pack-for-pdn-v406-updated-august-9-2015/">plugins</a>, but after you do it opens
+        <a target=" _blank" href="https://psdplugin.codeplex.com/">Photoshop PSDs</a>,
+        and <a target="_blank" href="http://forums.getpaint.net/index.php?/topic/31998-raw-filetype-2015-09-09/">camera RAW</a> files,
+        saves <a target="_blank" href="http://forums.getpaint.net/index.php?/topic/22841-new-optipng-file-type-plugin-june-12-2012/">optimized PNGs</a> for web use,
+        and even <a target="_blank" href="https://psfilterpdn.codeplex.com/">uses Photoshop filters</a>.
+    </p>
+
+    <h3>
         File / Drive Encryption - <a target="_blank" class="green" href="https://veracrypt.codeplex.com/">VeraCrypt</a>
     </h3>
     <p>
@@ -185,5 +209,27 @@
         This file or partition is encrypted with a password, preventing the drive from being mounted by anyone who doesn't know the password.
         Once mounted, the file or partition becomes available as a drive letter in Windows and you can use it as you would any other drive.
         For performance, I generally leave my system drive unencrypted.  After I start up Windows, I mount my veracrypt drive where my application data is stored, and then run my apps.
+    </p>
+
+    <h3>
+        File Sync Between Computers - <a target="_blank" class="green" href="https://github.com/canton7/SyncTrayzor">SyncTrayzor (which implements Syncthing)</a>
+    </h3>
+    <p>
+        If you're using file lockers such as Google Drive and Drop Box to sync arbitrary files between your computers, you should consider if you REALLY want that data in the cloud.
+        As long as you have files synced to computers in different physical locations (home / work / school / data center), there is no chance in losing your data to fire / etc.
+        After evaluating many options, I choose SyncTrayzor / Syncthing because it was FOSS, reliable, and fast.  It's also pretty light on system resources.  It's also an open standard, and there are compatible clients for Android, Linux, OS X, etc.
+    </p>
+
+    <h2>
+        Development Tools
+    </h2>
+    <h3>
+        Integrated Development Environment - <a target="_blank" class="red" href="https://www.visualstudio.com">Microsoft Visual Studio <span class="orange">(Free if your company is < 251 employees, < 6 developers, and < $1MM in annual revenue)</span></a>
+    </h3>
+    <p>
+        Visual Studio is simply amazing.  I've tried Eclipse, NetBeans, and some others, but they all pale in comparison.  Individuals and most smaller companies can use the Community version completely free.
+        If you have lighter needs, specifically if you ONLY develop web apps, check out <a target="_blank" class="orange" href="https://code.visualstudio.com/">Visual Studio Code</a>,
+        <a target="_blank" class="green" href="http://brackets.io/">Adobe Brackets</a>, or Github's <a target="_blank" class="green" href="https://atom.io/">Atom</a>.
+        All 3 of these are nice programs, but are more along the lines of text editors than full IDEs, but they work great for what they are.
     </p>
 </div>

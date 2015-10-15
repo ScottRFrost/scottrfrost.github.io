@@ -196,11 +196,13 @@ md-whiteframe md-input-container {
     line-height: 56px;
 }
 .material-icons {
-    font-size: 1em;
-    line-height: normal;
+    line-height: 0.75em;
 }
-
-a {
+md-icon {
+    height: 1em;
+    width: 1em;
+}
+a, a md-icon.ng-isolate-scope.material-icons {
     text-decoration: none;
     color: rgb(63, 81, 181);
 }
