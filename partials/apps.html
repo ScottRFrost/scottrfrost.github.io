@@ -132,7 +132,8 @@
     <p>
         Desktop sharing shouldn't require participants to download software before they can join.
         Unfortunately there are no publically-hosted FOSS desktop sharing services out there that don't require a client install. join.me works well and is lightweight.
-        <a target="_blank" class="red" href="https://www.teamviewer.com/en/index.aspx">TeamViewer</a> and <a target="_blank" class="red" href="http://www.gotomeeting.com/">GoToMeeting</a> are very popular (and rightly so, they're quite nice), but being non-free for commercial use kind of kills it for me.
+        <a target="_blank" class="red" href="https://www.teamviewer.com/en/index.aspx">TeamViewer</a> and 
+        <a target="_blank" class="red" href="http://www.gotomeeting.com/">GoToMeeting</a> are very popular (and rightly so, they're quite nice), but being non-free for commercial use kind of kills it for me.
     </p>
 
     <h3>
@@ -170,7 +171,8 @@
         If your server is Linux, it probably already has SSH server.
         Follow the <a target="_blank" href="https://docs.oracle.com/cd/E24628_01/install.121/e22624/preinstall_req_cygwin_ssh.htm#EMBSC152">instructions here</a> to set up Cygwin OpenSSH if your server (or your home machine) runs Windows.
         In KiTTY settings under SSH > Tunnels create a DYNAMIC local port tunnel and connect.  In FoxyProxy, create a new SOCKS proxy that points at the local port and whitelist whatever sites you'd like to go over the proxy.
-        In firefox about:config set extensions.foxyproxy.socks_remote_dns to true.  Make sure it works by going to one of the many "what's my IP address" websites.  It should show you server's IP address, not your regular external IP address that's shown in other browsers or with FoxyProxy disabled.
+        In firefox about:config set extensions.foxyproxy.socks_remote_dns to true. Make sure it works by going to one of the many "what's my IP address" websites.
+        It should show you server's IP address, not your regular external IP address that's shown in other browsers or with FoxyProxy disabled.
     </p>
 
 
@@ -224,7 +226,8 @@
         I'm not really happy with being plugged into this ecosystem after the leaks about Google's involvement in PRISM / etc, but Google Drive (and it's apps like Docs and Sheets) work great.
         I didn't install MS Office after reloading my machine in early 2012 just for fun and to see if I could live without it. Turns out that it was no problem.
         <a target="_blank" class="orange" href="https://dropbox.com/">DropBox</a> with their Office Online integration is pretty nice too, but is similarly closed / can't run your own server.
-        If you need to do a lot of offline editing, check out <a target=" _blank" class="green" href="https://www.libreoffice.org/download/libreoffice-fresh/">LibreOffice</a>, but I believe that desktop / thick client installs for editing documents & spreadsheets days are over at this point.
+        If you need to do a lot of offline editing, check out <a target=" _blank" class="green" href="https://www.libreoffice.org/download/libreoffice-fresh/">LibreOffice</a>, 
+        but I believe that desktop / thick client installs for editing documents & spreadsheets days are over at this point.
     </p>
 
     <h3>
@@ -238,12 +241,13 @@
     </p>
 
     <h3>
-        Text Editor / Search For Text in Files - <a target="_blank" class="green" href="https://notepad-plus-plus.org/">NotePad++</a>
+        Text Editor / Compare Files / Search For Text in Multiple Files - <a target="_blank" class="green" href="https://notepad-plus-plus.org/">NotePad++</a>
     </h3>
     <p>
         This quick and light text editor has been my go-to for years.  It's very fast and stable, even for large files.
         If you want a little more power, it's also quite extensible via plugins and has advanced features such as recording macros, syntax folding, document mapping, and even auto complete.
-        For quick and dirty C# edits, make sure you grab the <a target="_blank" class="green" href="http://csscript.net/npp/">CS-Script</a> plugin, which provides intellisene like Visual Studio.
+        For quick and dirty C# edits, make sure you grab the <a target="_blank" class="green" href="http://csscript.net/npp/">CS-Script</a> plugin, which provides C# intellisene like Visual Studio and
+        <a target="_blank" class="green" href="http://sourceforge.net/projects/npp-compare/">Compare</a> which provides WinMerge style left/right file comparison..
     </p>
 
     <h3>
