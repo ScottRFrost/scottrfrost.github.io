@@ -5,6 +5,7 @@
     <h4>
         Key: <span class="green">Free Open Source Software (FOSS)</span> &#183; <span class="orange">Zero cost (including business use) closed source software</span> &#183; <span class="red">Commercial Software (even if free for private use)</span>
     </h4>
+    For ease of installation, I have also included the <a target="_blank" class="green" href="https://chocolatey.org/">Chocolatey</a> command line for installing each app, where available (and the package seemed up to date).
 
     <h2>
         Internet / Networking
@@ -104,7 +105,7 @@
     </p>
 
     <h3>
-        Instant Messaging - <a target="_blank" class="green" href="https://telegram.org/">Telegram</a>
+        Instant Messaging - <a target="_blank" class="green" href="https://telegram.org/">Telegram</a> <span class="choco">choco install telegram</span>
     </h3>
     <p>
         Instant messaging should be secure, private, portable / cross-platform, and free.
@@ -114,7 +115,7 @@
     </p>
 
     <h3>
-        Voice Chat - <a target="_blank" class="green" href="http://mumble.info/">Mumble</a>
+        Voice Chat - <a target="_blank" class="green" href="http://mumble.info/">Mumble</a> <span class="choco">choco install mumble</span>
     </h3>
     <p>
         Like instant messaging above, I believe that voice chat should also be secure, private, portable / cross-platform, and free.
@@ -132,7 +133,7 @@
     <p>
         Desktop sharing shouldn't require participants to download software before they can join.
         Unfortunately there are no publically-hosted FOSS desktop sharing services out there that don't require a client install. join.me works well and is lightweight.
-        <a target="_blank" class="red" href="https://www.teamviewer.com/en/index.aspx">TeamViewer</a> and 
+        <a target="_blank" class="red" href="https://www.teamviewer.com/en/index.aspx">TeamViewer</a> and
         <a target="_blank" class="red" href="http://www.gotomeeting.com/">GoToMeeting</a> are very popular (and rightly so, they're quite nice), but being non-free for commercial use kind of kills it for me.
     </p>
 
@@ -147,11 +148,11 @@
     </p>
 
     <h3>
-        P2P / File Sharing - <a target="_blank" class="green" href="http://www.qbittorrent.org/">qBittorrrent</a>
+        P2P / File Sharing - <a target="_blank" class="green" href="http://www.qbittorrent.org/">qBittorrrent</a> <span class="choco">choco install qbittorrent</span>
     </h3>
     <p>
         IMPORTANT - I don't condone piracy of software, music or movies. There are hundreds of legitimate use cases for p2p file sharing. BitTorrent is the current king of p2p applications, but their official clients are terrible.
-        I've been favoring qBittorrent or <a target=" _blank" class="green" href="http://deluge-torrent.org/">Deluge</a> since uTorrent started adding unacceptable bloat and malware.
+        I've been favoring qBittorrent or <a target=" _blank" class="green" href="http://deluge-torrent.org/">Deluge</a> <span class="choco">choco install deluge</span> since uTorrent started adding unacceptable bloat and malware.
     </p>
 
     <h3>
@@ -164,7 +165,7 @@
     </p>
 
     <h3>
-        Private web browsing / filter avoidance - <a target="_blank" class="green" href="http://www.9bis.net/kitty/">KiTTY (a fork of PuTTY) client</a> with <a target="_blank" class="green" href="https://cygwin.com/">Cygwin OpenSSHd server</a>
+        Private web browsing / filter avoidance - <a target="_blank" class="green" href="http://www.9bis.net/kitty/">KiTTY (a fork of PuTTY) client</a> with <a target="_blank" class="green" href="https://cygwin.com/">Cygwin OpenSSHd server</a> <span class="choco">choco install mls-software-openssh</span>
     </h3>
     <p>
         A SSH server sitting on some decent upstream bandwidth combined with FoxyProxy makes for a pretty simple private browsing / filter avoidance system.
@@ -180,7 +181,7 @@
         Multimedia
     </h2>
     <h3>
-        Image Viewer / Comic Viewer - <a target="_blank" class="orange" href="http://www.bandisoft.com/honeyview/">Honeyview</a>
+        Image Viewer / Comic Viewer - <a target="_blank" class="orange" href="http://www.bandisoft.com/honeyview/">Honeyview</a> <span class="choco">choco install honeyview</span>
     </h3>
     <p>
         While there are many FOSS image viewers out there, very few of them look native / non-crappy in windows and are customizable.
@@ -201,7 +202,7 @@
     </p>
 
     <h3>
-        Video Player - <a target="_blank" class="green" href="https://www.videolan.org/vlc/">VLC Media Player</a>
+        Video Player - <a target="_blank" class="green" href="https://www.videolan.org/vlc/">VLC Media Player</a> <span class="choco">choco install vlc</span>
     </h3>
     <p>
         VLC provides ultimate compatibility with a light and simple to use interface.
@@ -209,10 +210,10 @@
         As a bonus, it can also handle simple conversion tasks.
     </p>
     <h3>
-        Video Conversion with DVD & Blu-Ray Ripping - <a target="_blank" class="green" href="http://vidcoder.net/">VidCoder</a> with <a target="_blank" class="orange" href="http://www.videohelp.com/software/DVDFab-Passkey">DVD Fab Passkey Lite</a>
+        Video Conversion with DVD & Blu-Ray Ripping - <a target="_blank" class="green" href="http://vidcoder.net/">VidCoder</a> <span class="choco">choco install vidcoder</span> with <a target="_blank" class="orange" href="http://www.videohelp.com/software/DVDFab-Passkey">DVD Fab Passkey Lite</a>
     </h3>
     <p>
-        VidCoder provides a more simplified interface to <a target="_blank" class="green" href="http://handbrake.fr/">HandBrake</a> to allow conversion of nearly every format to MP4 or MKV.
+        VidCoder provides a more simplified interface to <a target="_blank" class="green" href="http://handbrake.fr/">HandBrake</a> <span class="choco">choco install handbrake</span> to allow conversion of nearly every format to MP4 or MKV.
         Combined with DVD Fab Passkey Lite, which allows software to access copy-protected DVDs and Blu-Rays on-the-fly, you can copy your DVDs and Blu-Rays to your various devices.
     </p>
 
@@ -226,22 +227,23 @@
         I'm not really happy with being plugged into this ecosystem after the leaks about Google's involvement in PRISM / etc, but Google Drive (and it's apps like Docs and Sheets) work great.
         I didn't install MS Office after reloading my machine in early 2012 just for fun and to see if I could live without it. Turns out that it was no problem.
         <a target="_blank" class="orange" href="https://dropbox.com/">DropBox</a> with their Office Online integration is pretty nice too, but is similarly closed / can't run your own server.
-        If you need to do a lot of offline editing, check out <a target=" _blank" class="green" href="https://www.libreoffice.org/download/libreoffice-fresh/">LibreOffice</a>, 
+        If you need to do a lot of offline editing, check out <a target=" _blank" class="green" href="https://www.libreoffice.org/download/libreoffice-fresh/">LibreOffice</a>,
         but I believe that desktop / thick client installs for editing documents & spreadsheets days are over at this point.
     </p>
 
     <h3>
-        PDF - Viewer - Firefox built-in viewer, Printer - <a target="_blank" class="orange" href="http://www.bullzip.com/products/pdf/download.php">Bullzip PDF Printer (community edition)</a>
+        PDF - Viewer - Firefox built-in viewer, Printer - <a target="_blank" class="orange" href="http://www.bullzip.com/products/pdf/download.php">PDFCreator</a> <span class="choco">choco install pdfcreator</span>
     </h3>
     <p>
         The PDF viewers built into Firefox and Chromium have really come a long way. I don't feel a need for a separate reader app anymore.
-        For printing, there are TONS of options out there, but I found bullzip fit my needs the best.
+        For printing, there are TONS of options out there, but I found pdfcreator fit my needs the best.
         It allows printing to a variety of formats other than PDF and rather intelligently just pops me right into the file path to name my file when I print.
-        Simple and fast when you have to print several things to PDF.
+        The profiles make everything quick and simple.
+        Note that they had some malware bundling issues a while back, but the chocolatey package has always been clean.
     </p>
 
     <h3>
-        Text Editor / Compare Files / Search For Text in Multiple Files - <a target="_blank" class="green" href="https://notepad-plus-plus.org/">NotePad++</a>
+        Text Editor / Compare Files / Search For Text in Multiple Files - <a target="_blank" class="green" href="https://notepad-plus-plus.org/">NotePad++</a> <span class="choco">choco install notepadplusplus</span>
     </h3>
     <p>
         This quick and light text editor has been my go-to for years.  It's very fast and stable, even for large files.
@@ -251,7 +253,7 @@
     </p>
 
     <h3>
-        Drive / Partition Encryption - <a target="_blank" class="green" href="https://veracrypt.codeplex.com/">VeraCrypt</a>
+        Drive / Partition Encryption - <a target="_blank" class="green" href="https://veracrypt.codeplex.com/">VeraCrypt</a> <span class="choco">choco install veracrypt</span>
     </h3>
     <p>
         VeraCrypt creates an encrypted file or can encrypt an entire partition.
@@ -261,7 +263,7 @@
     </p>
 
     <h3>
-        File Compression / Encryption - <a target="_blank" class="green" href="http://www.7-zip.org/">7-Zip</a>
+        File Compression / Encryption - <a target="_blank" class="green" href="http://www.7-zip.org/">7-Zip</a> <span class="choco">choco install 7zip</span>
     </h3>
     <p>
         7-Zip is a powerful, but very simple to use compression app.
@@ -271,7 +273,7 @@
     </p>
 
     <h3>
-        File Sync Between Computers - <a target="_blank" class="green" href="https://github.com/canton7/SyncTrayzor">SyncTrayzor (which implements Syncthing)</a>
+        File Sync Between Computers - <a target="_blank" class="green" href="https://github.com/canton7/SyncTrayzor">SyncTrayzor (which implements Syncthing)</a> <span class="choco">choco install synctrayzor</span>
     </h3>
     <p>
         If you're using file lockers such as Google Drive and Drop Box to sync arbitrary files between your computers, you should consider if you REALLY want that data in the cloud.
@@ -283,7 +285,7 @@
         Development Tools
     </h2>
     <h3>
-        Integrated Development Environment - <a target="_blank" class="red" href="https://www.visualstudio.com">Microsoft Visual Studio <span class="orange">(Free Community Edition if your company is < 251 employees, < 6 developers, and < $1MM in annual revenue)</span></a>
+        Integrated Development Environment - <a target="_blank" class="red" href="https://www.visualstudio.com">Microsoft Visual Studio <span class="choco">choco install visualstudio2015community</span> <span class="orange">(Free Community Edition if your company is < 251 employees, < 6 developers, and < $1MM in annual revenue)</span></a>
     </h3>
     <p>
         Visual Studio is simply amazing.  I've tried Eclipse, NetBeans, and some others, but they all pale in comparison.  Individuals and most smaller companies can use the Community version completely free.

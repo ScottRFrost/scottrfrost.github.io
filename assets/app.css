@@ -180,6 +180,14 @@ table.data-table tbody tr:hover input {
     cursor: pointer;
     line-height: 42px;
 }
+.choco {
+    background-color: #012456;
+    color: white;
+    padding: 0.1em 0.3em;
+    font-weight: 100; 
+    font-size: 80%;
+    margin: 0 0 0 0.5em;
+}
 
 /* Angular Material Customizations */
 md-backdrop.md-opaque.md-default-theme {
