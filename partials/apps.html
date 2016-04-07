@@ -5,12 +5,9 @@
     <h4>
         Key: <span class="green">Free Open Source Software (FOSS)</span> &#183; <span class="orange">Zero cost (including business use) closed source software</span> &#183; <span class="red">Commercial Software (even if free for private use)</span>
     </h4>
-    For ease of installation, I have also included the <a target="_blank" class="green" href="https://chocolatey.org/">Chocolatey</a> command line for installing each app, where available (and the package seemed up to date).  To install Chocolatey, hold down the window flag key and press X, choose Command Prompt (Admin), then enter these two commands:<br />
+    For ease of installation, I have also included the <a target="_blank" class="green" href="https://chocolatey.org/">Chocolatey</a> command line for installing each app, where available (and the package seemed up to date).  To install Chocolatey, hold down the window flag key and press X, choose Command Prompt (Admin), then enter this command:<br />
     <span class="choco">
-        @powershell set-executionpolicy Bypass -Force
-    </span><br />
-    <span class="choco">
-        @powershell -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+        @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
     </span>
 
     <h2>
